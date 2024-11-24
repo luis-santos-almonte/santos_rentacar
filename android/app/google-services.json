@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "769927556035",
+    "project_id": "santos-rentacar",
+    "storage_bucket": "santos-rentacar.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769927556035:android:e294fcf1111b00773e2b76",
+        "android_client_info": {
+          "package_name": "com.santos.rentacar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb9Jt7aS3TMO8viXwfNRACfYjAd6nomdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
