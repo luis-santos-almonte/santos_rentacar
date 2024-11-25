@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:santos_rentacar/features/home/car_list_screen.dart';
 
 class OnboardingPage extends StatelessWidget {
-  const OnboardingPage({Key? key}) : super(key: key);
+  const OnboardingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,12 @@ class OnboardingPage extends StatelessWidget {
                     width: 320,
                     height: 54,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CarListScreen()));
+                        },
                         style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.black,
                             backgroundColor: Colors.white),
