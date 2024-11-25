@@ -2,10 +2,10 @@ class Car {
   final String model;
   final double distance;
   final double fuelCapacity;
-  final double fuelType;
+  final String fuelType;
   final double pricePerHour;
   final double year;
-  final double color;
+  final String color;
 
   Car(
       {required this.model,
