@@ -30,6 +30,8 @@ class CarListScreen extends StatelessWidget {
         year: 2024)
   ];
 
+  CarListScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

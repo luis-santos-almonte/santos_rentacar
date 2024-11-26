@@ -3,10 +3,10 @@ import 'package:santos_rentacar/data/models/car_model.dart';
 import 'package:santos_rentacar/features/home/car_details_screen.dart';
 import 'package:santos_rentacar/utils/functions.dart';
 
-class CarCard extends StatelessWidget {
+class DetailedCarCard extends StatelessWidget {
   final Car car;
 
-  const CarCard({super.key, required this.car});
+  const DetailedCarCard({super.key, required this.car});
 
   @override
   Widget build(BuildContext context) {
@@ -44,21 +44,49 @@ class CarCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       children: [
                         Image.asset('assets/images/gps.png'),
-                        Text('${car.distance.toStringAsFixed(0)}km')
+                        const SizedBox(width: 5),
+                        Text('${car.distance.toStringAsFixed(0)}km'),
                       ],
                     ),
+                    const SizedBox(height: 10),
                     Row(
                       children: [
                         Image.asset('assets/images/pump.png'),
+                        const SizedBox(width: 5),
                         Text(
-                            '${car.fuelCapacity.toStringAsFixed(0)}L ${capitalize(car.fuelType)}')
+                            '${car.fuelCapacity.toStringAsFixed(0)}L ${capitalize(car.fuelType)}'),
                       ],
-                    )
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.color_lens,
+                          color: Colors.grey,
+                          size: 18,
+                        ),
+                        const SizedBox(width: 5),
+                        Text('${capitalize(car.color)}'),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.access_time_filled_sharp,
+                          color: Colors.grey,
+                          size: 18,
+                        ),
+                        const SizedBox(width: 5),
+                        Text('${car.year.toStringAsFixed(0)}'),
+                      ],
+                    ),
                   ],
                 ),
                 Text(
