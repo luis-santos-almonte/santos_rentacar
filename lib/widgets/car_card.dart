@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:santos_rentacar/data/models/car_model.dart';
+import 'package:santos_rentacar/features/home/car_details_screen.dart';
 
 class CarCard extends StatelessWidget {
   final Car car;
@@ -9,13 +10,21 @@ class CarCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => CarDetailsScreen(
+                      car: car,
+                    )));
+      },
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-        padding: EdgeInsets.all(20),
+        margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-            color: Color(0xffF3F3F3),
+            color: const Color(0xffF3F3F3),
             borderRadius: BorderRadius.circular(20),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(color: Colors.black12, spreadRadius: 5, blurRadius: 10),
             ]),
         child: Column(
@@ -26,9 +35,9 @@ class CarCard extends StatelessWidget {
             ),
             Text(
               car.model,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -53,7 +62,7 @@ class CarCard extends StatelessWidget {
                 ),
                 Text(
                   '\$${car.pricePerHour.toStringAsFixed(2)}/h',
-                  style: TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: 16),
                 )
               ],
             )

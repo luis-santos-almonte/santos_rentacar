@@ -3,7 +3,10 @@ import 'package:santos_rentacar/data/models/car_model.dart';
 import 'package:santos_rentacar/widgets/car_card.dart';
 
 class CarDetailsScreen extends StatelessWidget {
-  const CarDetailsScreen({super.key});
+  final Car car;
+
+  const CarDetailsScreen({super.key, required this.car});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,14 +20,14 @@ class CarDetailsScreen extends StatelessWidget {
         children: [
           CarCard(
               car: Car(
-                  model: 'Fortuner GR',
-                  distance: 870,
-                  color: 'black',
-                  fuelCapacity: 50,
-                  fuelType: 'Gasoline',
-                  pricePerHour: 45,
-                  year: 2024)),
-          SizedBox(
+                  model: car.model,
+                  distance: car.distance,
+                  color: car.color,
+                  fuelCapacity: car.fuelCapacity,
+                  fuelType: car.fuelType,
+                  pricePerHour: car.pricePerHour,
+                  year: car.year)),
+          const SizedBox(
             height: 20,
           ),
           Padding(
@@ -33,17 +36,17 @@ class CarDetailsScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                        color: Color(0xffF3F3F3),
+                        color: const Color(0xffF3F3F3),
                         borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               color: Colors.black12,
                               blurRadius: 10,
                               spreadRadius: 5)
                         ]),
-                    child: Column(
+                    child: const Column(
                       children: [
                         CircleAvatar(
                           radius: 40,
@@ -64,16 +67,18 @@ class CarDetailsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 20,),
+                const SizedBox(
+                  width: 20,
+                ),
                 Expanded(
                   child: Container(
                     height: 170,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             image: AssetImage('assets/images/maps.png'),
                             fit: BoxFit.cover),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               color: Colors.black12,
                               blurRadius: 10,
@@ -83,7 +88,7 @@ class CarDetailsScreen extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
         ],
       ),
     );

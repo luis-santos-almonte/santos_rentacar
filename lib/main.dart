@@ -1,7 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:santos_rentacar/features/home/car_details_screen.dart';
 import 'package:santos_rentacar/features/onboard_screen/onboarding_page.dart';
 import 'package:santos_rentacar/firebase_options.dart';
 
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CarDetailsScreen(),
+      home: const OnboardingPage(),
     );
   }
 }
