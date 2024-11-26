@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:santos_rentacar/data/models/car_model.dart';
-import 'package:santos_rentacar/widgets/car_card.dart';
+import 'package:santos_rentacar/widgets/detailed_car_card.dart';
 
 class CarDetailsScreen extends StatelessWidget {
   final Car car;
@@ -18,7 +18,7 @@ class CarDetailsScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          CarCard(
+          DetailedCarCard(
               car: Car(
                   model: car.model,
                   distance: car.distance,
