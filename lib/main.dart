@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:santos_rentacar/features/bloc/car_bloc.dart';
 import 'package:santos_rentacar/features/bloc/car_event.dart';
+import 'package:santos_rentacar/features/pages/login/login_screen.dart';
 import 'package:santos_rentacar/features/pages/onboard_screen/onboarding_page.dart';
 import 'package:santos_rentacar/firebase_options.dart';
 import 'package:santos_rentacar/injection_container.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const OnboardingPage(),
+        home: const LoginScreen(),
       ),
     );
   }

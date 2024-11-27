@@ -46,7 +46,7 @@ class DetailedCarCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Image.asset('assets/images/gps.png'),
+                        Image.asset('assets/images/icons/gps.png'),
                         const SizedBox(width: 5),
                         Text('${car.distance.toStringAsFixed(0)}km'),
                       ],
@@ -54,7 +54,7 @@ class DetailedCarCard extends StatelessWidget {
                     const SizedBox(height: 10),
                     Row(
                       children: [
-                        Image.asset('assets/images/pump.png'),
+                        Image.asset('assets/images/icons/pump.png'),
                         const SizedBox(width: 5),
                         Text(
                             '${car.fuelCapacity.toStringAsFixed(0)}L ${capitalize(car.fuelType)}'),
