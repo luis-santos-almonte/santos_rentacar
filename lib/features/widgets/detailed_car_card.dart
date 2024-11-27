@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:santos_rentacar/data/models/car_model.dart';
-import 'package:santos_rentacar/features/home/car_details_screen.dart';
+import 'package:santos_rentacar/features/pages/home/car_details_screen.dart';
 import 'package:santos_rentacar/utils/functions.dart';
 
 class DetailedCarCard extends StatelessWidget {

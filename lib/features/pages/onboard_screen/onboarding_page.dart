@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:santos_rentacar/features/home/car_list_screen.dart';
+import 'package:santos_rentacar/features/pages/home/car_list_screen.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
