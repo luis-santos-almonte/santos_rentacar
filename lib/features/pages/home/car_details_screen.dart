@@ -26,7 +26,8 @@ class CarDetailsScreen extends StatelessWidget {
                   fuelCapacity: car.fuelCapacity,
                   fuelType: car.fuelType,
                   pricePerHour: car.pricePerHour,
-                  year: car.year)),
+                  year: car.year,
+                  imageUrl: car.imageUrl)),
           const SizedBox(
             height: 20,
           ),
