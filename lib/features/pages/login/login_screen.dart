@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:santos_rentacar/features/pages/login/register_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -88,7 +89,13 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(
                           width: double.infinity,
                           child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const RegisterScreen()));
+                              },
                               child: const Text('Create account')))
                     ],
                   ),
