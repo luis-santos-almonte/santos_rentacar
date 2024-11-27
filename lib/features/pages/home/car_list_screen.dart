@@ -1,52 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:santos_rentacar/data/models/car_model.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:santos_rentacar/features/bloc/car_bloc.dart';
+import 'package:santos_rentacar/features/bloc/car_state.dart';
 import 'package:santos_rentacar/features/widgets/car_card.dart';
 
 class CarListScreen extends StatelessWidget {
-  final List<Car> cars = [
-    Car(
-        model: 'Fortuner GR',
-        distance: 870,
-        color: 'black',
-        fuelCapacity: 50,
-        fuelType: 'Gasoline',
-        pricePerHour: 45,
-        year: 2024),
-    Car(
-        model: 'Fortuner GR',
-        distance: 870,
-        color: 'black',
-        fuelCapacity: 50,
-        fuelType: 'Gasoline',
-        pricePerHour: 45,
-        year: 2024),
-    Car(
-        model: 'Fortuner GR',
-        distance: 870,
-        color: 'black',
-        fuelCapacity: 50,
-        fuelType: 'Gasoline',
-        pricePerHour: 45,
-        year: 2024)
-  ];
-
-  CarListScreen({super.key});
+  const CarListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Choose Your Car'),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
-      ),
-      body: ListView.builder(
-        itemCount: cars.length,
-        itemBuilder: (context, index) {
-          return CarCard(car: cars[index]);
-        },
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('Choose Your Car'),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+        ),
+        body: BlocBuilder<CarBloc, CarState>(builder: (context, state) {
+          if (state is CarsLoading) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (state is CarsLoaded) {
+            return ListView.builder(
+              itemCount: state.cars.length,
+              itemBuilder: (context, index) {
+                return CarCard(car: state.cars[index]);
+              },
+            );
+          } else if (state is CarsError) {
+            return Center(
+              child: Text('error : ${state.message}'),
+            );
+          }
+          return Container();
+        }));
   }
 }
