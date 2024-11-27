@@ -30,10 +30,7 @@ class DetailedCarCard extends StatelessWidget {
             ]),
         child: Column(
           children: [
-            Image.asset(
-              'assets/images/car_image.png',
-              height: 120,
-            ),
+            Image.network(car.imageUrl),
             Text(
               car.model,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -66,7 +63,7 @@ class DetailedCarCard extends StatelessWidget {
                     const SizedBox(height: 10),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.color_lens,
                           color: Colors.grey,
                           size: 18,
@@ -78,7 +75,7 @@ class DetailedCarCard extends StatelessWidget {
                     const SizedBox(height: 10),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.access_time_filled_sharp,
                           color: Colors.grey,
                           size: 18,

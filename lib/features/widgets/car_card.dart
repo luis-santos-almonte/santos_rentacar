@@ -30,10 +30,7 @@ class CarCard extends StatelessWidget {
             ]),
         child: Column(
           children: [
-            Image.asset(
-              'assets/images/car_image.png',
-              height: 120,
-            ),
+            Image.network(car.imageUrl, height: 120,),
             Text(
               car.model,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
