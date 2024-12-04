@@ -18,6 +18,6 @@ void initInjection() {
     getIt.registerLazySingleton<GetCars>(() => GetCars(getIt<CarRepository>()));
     getIt.registerFactory(() => CarBloc(getCars: getIt<GetCars>()));
   } catch (e) {
-    throw e;
+    rethrow;
   }
 }
