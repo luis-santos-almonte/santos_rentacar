@@ -30,7 +30,10 @@ class CarCard extends StatelessWidget {
             ]),
         child: Column(
           children: [
-            Image.network(car.imageUrl, height: 120,),
+            Image.network(
+              car.imageUrl,
+              height: 120,
+            ),
             Text(
               car.model,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -45,13 +48,13 @@ class CarCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Image.asset('assets/images/gps.png'),
+                        Image.asset('assets/images/icons/gps.png'),
                         Text('${car.distance.toStringAsFixed(0)}km')
                       ],
                     ),
                     Row(
                       children: [
-                        Image.asset('assets/images/pump.png'),
+                        Image.asset('assets/images/icons/pump.png'),
                         Text(
                             '${car.fuelCapacity.toStringAsFixed(0)}L ${capitalize(car.fuelType)}')
                       ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:santos_rentacar/features/bloc/car_bloc.dart';
 import 'package:santos_rentacar/features/bloc/car_state.dart';
+import 'package:santos_rentacar/features/pages/login/custom_profile_screen.dart';
 import 'package:santos_rentacar/features/widgets/car_card.dart';
 
 class CarListScreen extends StatelessWidget {
@@ -15,6 +16,19 @@ class CarListScreen extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.person),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute<CustomProfileScreen>(
+                    builder: (context) => const CustomProfileScreen(),
+                  ),
+                );
+              },
+            )
+          ],
         ),
         body: BlocBuilder<CarBloc, CarState>(builder: (context, state) {
           if (state is CarsLoading) {

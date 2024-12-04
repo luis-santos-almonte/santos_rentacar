@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAb9Jt7aS3TMO8viXwfNRACfYjAd6nomdE',
-    appId: '1:769927556035:android:e294fcf1111b00773e2b76',
+    appId: '1:769927556035:android:d554f12a917efa373e2b76',
     messagingSenderId: '769927556035',
     projectId: 'santos-rentacar',
     storageBucket: 'santos-rentacar.firebasestorage.app',
@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '769927556035',
     projectId: 'santos-rentacar',
     storageBucket: 'santos-rentacar.firebasestorage.app',
+    androidClientId: '769927556035-muflcpac6f3gjvtnkkvhmtlo4fv7had4.apps.googleusercontent.com',
+    iosClientId: '769927556035-n0aih91g4qum9phchpvbvuj52r4b1fuu.apps.googleusercontent.com',
     iosBundleId: 'com.example.santosRentacar',
   );
 
@@ -72,6 +74,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '769927556035',
     projectId: 'santos-rentacar',
     storageBucket: 'santos-rentacar.firebasestorage.app',
+    androidClientId: '769927556035-muflcpac6f3gjvtnkkvhmtlo4fv7had4.apps.googleusercontent.com',
+    iosClientId: '769927556035-n0aih91g4qum9phchpvbvuj52r4b1fuu.apps.googleusercontent.com',
     iosBundleId: 'com.example.santosRentacar',
   );
 
@@ -83,4 +87,5 @@ class DefaultFirebaseOptions {
     authDomain: 'santos-rentacar.firebaseapp.com',
     storageBucket: 'santos-rentacar.firebasestorage.app',
   );
+
 }

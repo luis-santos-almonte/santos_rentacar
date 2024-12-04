@@ -51,7 +51,7 @@ class CarDetailsScreen extends StatelessWidget {
                       children: [
                         CircleAvatar(
                           radius: 40,
-                          backgroundImage: AssetImage('assets/images/user.png'),
+                          backgroundImage: AssetImage('assets/images/general/user.png'),
                         ),
                         SizedBox(
                           height: 10,
@@ -77,7 +77,7 @@ class CarDetailsScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
-                            image: AssetImage('assets/images/maps.png'),
+                            image: AssetImage('assets/images/icons/maps.png'),
                             fit: BoxFit.cover),
                         boxShadow: const [
                           BoxShadow(
